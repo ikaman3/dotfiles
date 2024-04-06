@@ -1,0 +1,18 @@
+# JAVA 환경 변수 설정 
+## Jmeter 설정
+#export PATH="/usr/local/opt/openjdk@17/bin:$PATH"
+#export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export JAVA_HOME=$(/usr/libexec/java_home -v21)
+
+# API Keys
+## GPT API Key
+export OPENAI_API_KEY=""
+## Naver API Keys
+export NAVER_PAPAGO_CLIENT_ID=""
+export NAVER_PAPAGO_CLIENT_SECRET=""
+
+# HuggingFace Setting for mlx
+export HF_HUB_ENABLE_HF_TRANSFER=1
+
+printf "Loading from .zshenv\n"

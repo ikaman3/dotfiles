@@ -1,0 +1,16 @@
+[user]
+	name = ikaman3
+	email = yjhama1532@gmail.com
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
+[core]
+	excludesfile = /Users/main/.gitignore_global
+	quotepath = off
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[safe]

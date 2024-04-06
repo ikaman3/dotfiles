@@ -1,0 +1,57 @@
+{
+    "explorer.confirmDelete": false,
+    "editor.fontSize": 18,
+    "explorer.confirmDragAndDrop": false,
+    "terminal.integrated.fontSize": 18,
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "workbench.startupEditor": "none",
+    "editor.minimap.enabled": false,
+    "debug.console.fontSize": 18,
+    "update.mode": "none",
+    "security.workspace.trust.untrustedFiles": "open",
+    "deno.enable": true,
+    "explorer.compactFolders": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "workbench.colorTheme": "Default Light+",
+    "cmake.configureOnOpen": true,
+    "editor.fontWeight": "normal",
+    "git.openRepositoryInParentFolders": "never",
+    "lldb.suppressUpdateNotifications": true,
+    "extensions.ignoreRecommendations": true,
+    "terminal.integrated.scrollback": 10000,
+    "python.defaultInterpreterPath": "${workspaceFolder}/python_venv/<project_name>/bin/python3.12",
+    "redhat.telemetry.enabled": false,
+    "java.jdt.ls.java.home": "/Users/main/Library/java/JavaVirtualMachines/openjdk-20.0.1/Contents/Home",
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "files.watcherExclude": {
+        "**/.git": true,
+        "**/node_modules": true,
+        "**/.cache-loader": true,
+        "**/.DS_Store": true,
+        "**/study": true,
+        "**/addressbook": true
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "window.zoomLevel": -1,
+    "workbench.preferredDarkColorTheme": "Default Light+",
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "prettier.tabWidth": 4,
+    "workbench.iconTheme": "material-icon-theme",
+    "files.exclude": {
+        "**/.git": false,
+        "**/.svn": false
+    },
+    "explorer.confirmPasteNative": false,
+    "prettier.printWidth": 160
+}

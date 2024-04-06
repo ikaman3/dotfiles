@@ -1,0 +1,41 @@
+# Shell History Setting
+setopt INC_APPEND_HISTORY # 히스토리 파일에 즉시 쓰기 허용. 명령어 실행 시 파일에 즉시 기록
+setopt SHARE_HISTORY # 터미널 세션 간에 히스토리를 공유 
+#setopt HIST_IGNORE_DUPS # 연속으로 중복된 명령어 입력시 기록하지 않음. 밑의 옵션을 사용하면 의미 없음.
+setopt HIST_IGNORE_ALL_DUPS # 모든 중복된 명령어를 무시
+setopt HIST_FIND_NO_DUPS # 히스토리 검색 중에 동일한 명령어가 여러 번 나타나지 않음
+setopt HIST_IGNORE_SPACE # 명령어 앞부분에 공백이 있으면 해당 명령어를 기록하지 않음
+setopt HIST_SAVE_NO_DUPS # 히스토리 파일에 기록할 때 중복된 명령어 제거
+setopt HIST_REDUCE_BLANKS # 연속된 공백을 하나로 줄임
+setopt HIST_EXPIRE_DUPS_FIRST # 중복된 명령어 중 더 오래된 것을 삭제
+# Shell Behavior Settings
+setopt AUTO_CD # 폴더 이름만 입력해도 자동으로 cd
+
+# History Size Setup
+HISTSIZE=100000
+HISTFILESIZE=100000
+
+# M1 이후 Macbook의homebrew Error 해결
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/opt/homebrew/sbin:$PATH"
+
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
+# Terminal 환경 설정
+## 색상 지정
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
+## HOME, END Key Mapping
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
+## time 명령어 format setting
+TIMEFMT=$'\n===============\n%J\nCPU\t%P\nuser\t%*U s\nsystem\t%*S s\ntotal\t%*E s'
+
+# Alias
+## Send WOL packet
+resolved_ip=$(nslookup ikaman.duckdns.org | awk '/^Address: / {print $2}') # DDNS 주소로 대상 IP 주소를 얻어냄
+alias wol="wakeonlan -i ${resolved_ip} -p 9998 70:4d:7b:2d:12:bb"
+
+# .zprofile 로딩 메시지 출력
+printf "%s\n" "Loading from .zprofile"
