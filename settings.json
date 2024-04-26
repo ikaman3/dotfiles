@@ -23,7 +23,7 @@
     "redhat.telemetry.enabled": false,
     "java.jdt.ls.java.home": "/Users/main/Library/java/JavaVirtualMachines/openjdk-20.0.1/Contents/Home",
     "github.copilot.enable": {
-        "*": false,
+        "*": true,
         "plaintext": false,
         "markdown": false,
         "scminput": false
@@ -53,5 +53,5 @@
         "**/.svn": false
     },
     "explorer.confirmPasteNative": false,
-    "prettier.printWidth": 160
+    "editor.tabSize": 2
 }
