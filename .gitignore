@@ -164,3 +164,4 @@ cython_debug/
 # zsh environment variable
 .zshenv
 .zshrc
+.zprofile

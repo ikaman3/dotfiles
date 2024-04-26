@@ -34,8 +34,8 @@ TIMEFMT=$'\n===============\n%J\nCPU\t%P\nuser\t%*U s\nsystem\t%*S s\ntotal\t%*E
 
 # Alias
 ## Send WOL packet
-resolved_ip=$(nslookup ikaman.duckdns.org | awk '/^Address: / {print $2}') # DDNS 주소로 대상 IP 주소를 얻어냄
-alias wol="wakeonlan -i ${resolved_ip} -p 9998 70:4d:7b:2d:12:bb"
+resolved_ip=$(nslookup <domain> | awk '/^Address: / {print $2}') # DDNS 주소로 대상 IP 주소를 얻어냄
+alias wol="wakeonlan -i ${resolved_ip} -p <port> <MAC Address>"
 
 # .zprofile 로딩 메시지 출력
 printf "%s\n" "Loading from .zprofile"
