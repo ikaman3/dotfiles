@@ -10,5 +10,5 @@ filtered_packages=$(printf "%s" "${outdated_packages}" | grep -v "^microsoft")
 if [ -n "${filtered_packages}" ]; then
     brew upgrade ${filtered_packages}
 else
-    printf "%s" "업그레이드할 패키지가 없음."
+    printf "%s\n" "업그레이드할 패키지가 없음."
 fi
