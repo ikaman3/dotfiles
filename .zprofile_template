@@ -37,5 +37,14 @@ TIMEFMT=$'\n===============\n%J\nCPU\t%P\nuser\t%*U s\nsystem\t%*S s\ntotal\t%*E
 resolved_ip=$(nslookup <domain> | awk '/^Address: / {print $2}') # DDNS 주소로 대상 IP 주소를 얻어냄
 alias wol="wakeonlan -i ${resolved_ip} -p <port> <MAC Address>"
 
+# 유튜브 오디오 다운
+ytaudio() {
+  yt-dlp --extract-audio --audio-format mp3 "$@"
+}
+# 유튜브 영상(mp4) 전용 함수
+ytvideo() {
+  yt-dlp -f "bestvideo+bestaudio" --merge-output-format mp4 "$@"
+}
+
 # .zprofile 로딩 메시지 출력
 printf "%s\n" "Loading from .zprofile"
